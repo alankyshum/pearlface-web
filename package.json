@@ -21,6 +21,7 @@
     "@ember/edition-utils": "^1.1.1",
     "@ember/optional-features": "^0.7.0",
     "@glimmer/component": "^0.14.0-alpha.12",
+    "@types/ember__routing": "^3.0.9",
     "babel-eslint": "^10.0.2",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^1.2.20",

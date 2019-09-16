@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "noEmit": true,
+    "target": "es2019",
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "pearlface-web/*": ["app/*"],
+      "*": ["types/*", "node_modules/*"]
+    },
+    "typeRoots": [
+      "types", "node_modules/@types"
+    ]
+  },
+  "include": [
+    "types", "app"
+  ],
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "tmp",
+    "vendor",
+    ".git",
+    "dist"
+  ]
+}
