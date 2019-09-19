@@ -195,30 +195,26 @@ export default {
             "link": "How We Work Details Page - Career Session: Aditi"
           },
           "icon-background": "Quotation mark in Invision Icon Library"
-        },
-        {
-          "problem_topic": "Can't find your problems?",
-          "body": {
-            "sentence_1": "No worries - your",
-            "sentence_2": "hypnotherapist, <br/> Priti",
-            "sentence_3": "is always here to help."
-          },
-          "main_buttons": [
-            {
-              "text": "Chat with Priti",
-              "link": "Chat with Priti page"
-            },
-            {
-              "text": "Start free trial",
-              "link": "Start free trial page"
-            },
-            {
-              "text": "Check pricing",
-              "link": "#pricing"
-            }
-          ]
         }
       ],
+      "other_problem": {
+        "problem_topic": "Can't find your problems?",
+        "body": "No worries - your <strong>hypnotherapist, <br/> Priti</strong> is always here to help.",
+        "cta_button": {
+          "text": "Chat with Priti",
+          "link": "Chat with Priti page"
+        },
+        "main_buttons": [
+          {
+            "text": "Start free trial",
+            "link": "Start free trial page"
+          },
+          {
+            "text": "Check pricing",
+            "link": "#pricing"
+          }
+        ]
+      },
       "process": {
         "headline": "How is our hypnotherapy process?",
         "steps": [
@@ -259,7 +255,7 @@ export default {
     "aboutPriti": {
       "headline": "About Priti",
       "tagline": "Your hypnotherapist",
-      "Priti_Self_Introduction": {
+      "intro": {
         "headline": "Greetings from Priti",
         "main_button": {
           "icon": "play",
@@ -274,83 +270,74 @@ export default {
           "link": "More about Priti page"
         }
       },
-      "Recognition": [
-        {
-          "tagline": "Recognitions from professional associations",
-          "image_carousell": [
-            {
-              "certificate": {
-                "image_background": "Priti_Cert.jpg",
-                "description": "Priti's official cert"
-              }
-            },
-            {
-              "certificate": {
-                "image_background": "Fake_cert_1.jpeg",
-                "description": "To-be-updated cert by Priti 1"
-              }
-            },
-            {
-              "certificate": {
-                "image_background": "Fake_Cert_2.jpg",
-                "description": "To-be-updated cert by Priti 2"
-              }
+      "pro_recognition": {
+        "tagline": "Recognitions from professional associations",
+        "image_carousel": [
+          {
+            "certificate": {
+              "image_background": "Priti_Cert.jpg",
+              "description": "Priti's official cert"
             }
-          ],
-          "navigation bar": {
-            "dot_1": "dark",
-            "dot_2": "light",
-            "dot_3": "light"
+          },
+          {
+            "certificate": {
+              "image_background": "Fake_cert_1.jpeg",
+              "description": "To-be-updated cert by Priti 1"
+            }
+          },
+          {
+            "certificate": {
+              "image_background": "Fake_Cert_2.jpg",
+              "description": "To-be-updated cert by Priti 2"
+            }
           }
-        },
-        {
-          "tagline": "Recognitions from clients",
-          "testimonials": [
-            {
-              "client": "Meena",
-              "linkToService": {
-                "text": "Weight Loss session",
-                "link": "How We Work - Weight Loss Session page"
-              },
-              "body": [
-                "<strong> \"I've never really even explored a talk about that to my husband, family or others.</strong>",
-                "A lot of my experiences Priti was bringing out was a lot of childhood experiences and experiences which may have been suppressed to some extent.",
-                "She was trying to bring all that out and <strong>I felt very comfortable talking to her.\" </strong>"
-              ],
-              "icon-background": "Quotation mark in Invision Icon Library"
+        ],
+      },
+      "client_recognition": {
+        "tagline": "Recognitions from clients",
+        "testimonials": [
+          {
+            "client": "Meena",
+            "linkToService": {
+              "text": "Weight Loss session",
+              "link": "How We Work - Weight Loss Session page"
             },
-            {
-              "client": "Anushya",
-              "linkToService": {
-                "text": "Relationship session",
-                "link": "How We Work - Relationship Session page"
-              },
-              "body": [
-                "<strong>\"Priti's like a mama type.</strong>",
-                "All the techniques helped me in real life situation at work and in personal life to be <strong>more efficient.\" </strong>"
-              ],
-              "icon-background": "Quotation mark in Invision Icon Library"
+            "body": [
+              "<strong> \"I've never really even explored a talk about that to my husband, family or others.</strong>",
+              "A lot of my experiences Priti was bringing out was a lot of childhood experiences and experiences which may have been suppressed to some extent.",
+              "She was trying to bring all that out and <strong>I felt very comfortable talking to her.\" </strong>"
+            ],
+            "icon-background": "Quotation mark in Invision Icon Library"
+          },
+          {
+            "client": "Anushya",
+            "linkToService": {
+              "text": "Relationship session",
+              "link": "How We Work - Relationship Session page"
             },
-            {
-              "client": "Himica",
-              "linkToService": {
-                "text": "Career session",
-                "link": "How We Work - Career Session page"
-              },
-              "body": [
-                "\"I seldom disclose myself, but <strong>Priti's different.</strong> <br/> She's a <strong> good listener </strong>.\""
-              ],
-              "icon-background": "Quotation mark in Invision Icon Library"
+            "body": [
+              "<strong>\"Priti's like a mama type.</strong>",
+              "All the techniques helped me in real life situation at work and in personal life to be <strong>more efficient.\" </strong>"
+            ],
+            "icon-background": "Quotation mark in Invision Icon Library"
+          },
+          {
+            "client": "Himica",
+            "linkToService": {
+              "text": "Career session",
+              "link": "How We Work - Career Session page"
             },
-            {
-              "cta_button": {
-                "text": "Start free trial",
-                "link": "Start free trial page"
-              }
-            }
-          ]
+            "body": [
+              "\"I seldom disclose myself, but <strong>Priti's different.</strong> <br/> She's a <strong> good listener </strong>.\""
+            ],
+            "icon-background": "Quotation mark in Invision Icon Library"
+          },
+        ],
+        "cta_button": {
+          "text": "Start free trial",
+          "link": "Start free trial page"
         }
-      ]
+      }
     }
   },
   "pricing": {
@@ -374,10 +361,8 @@ export default {
             ]
           },
           "other_pricing_options": {
+            "title": "Other pricing options",
             "options": [
-              {
-                "title": "Other pricing options"
-              },
               {
                 "text": "$60 per 30 mins",
                 "link": "#pricing1"
@@ -477,17 +462,15 @@ export default {
             }
           ]
         },
-        {
-          "others": {
-            "title": "Want other options?",
-            "button": {
-              "type": "primary",
-              "text": "Chat with Priti & make your own",
-              "link": "/Chat_with_Priti"
-            }
-          }
+      ],
+      "others": {
+        "title": "Want other options?",
+        "button": {
+          "type": "primary",
+          "text": "Chat with Priti & make your own",
+          "link": "/Chat_with_Priti"
         }
-      ]
+      },
     },
     "discounts": {
       "tagline": "Discounts & coupons",
@@ -549,18 +532,16 @@ export default {
             "link": "pop-up window with social media sharing option"
           }
         },
-        {
-          "button": {
-            "type": "least_important",
-            "text": "View more coupons"
-          }
-        }
-      ]
+      ],
+      "button": {
+        "type": "least_important",
+        "text": "View more coupons"
+      }
     }
   },
   "FAQs": {
     "headline": "FAQs",
-    "sub-headline": "Co-created by Priti & clients",
+    "subheadline": "Co-created by Priti & clients",
     "remarks": "The following result is listed according to their popularity.",
     "search_engine": {
       "text": "Type keywords here",
@@ -569,14 +550,13 @@ export default {
     "topics": [
       {
         "concept": "1. Hypnotherapy concepts",
-        "arrow": "upward",
-        "Q&A": [
+        "q_and_a": [
           {
             "Asker": "Curious folks like you",
             "Question": "What are the differences between \"hypnotherapy\" and \"aromatherapy\"?"
           },
           {
-            "Answerer_1": "Priti",
+            "Answerer": "Priti",
             "Answer": "In up so discovery my middleton eagerness dejection explained. Estimating excellence ye contrasted insensible as. Oh up unsatiable advantages decisively as at interested.",
             "Likes_button": {
               "Icon": "heart (InVision Icon Library)",
@@ -584,7 +564,7 @@ export default {
             }
           },
           {
-            "Answerer_2": "Client Meena",
+            "Answerer": "Client Meena",
             "Answer": "So delightful up dissimilar by unreserved it connection frequently. Do an high room so in paid. Up on cousin ye dinner should in.",
             "Likes_button": {
               "Icon": "heart (InVision Icon Library)",
@@ -608,18 +588,16 @@ export default {
         "others": {
           "tagline": "Other related questions you may ask",
           "options_button": [
-            "What are the differences between \"hypnotherapy\" and \"REIKI\"?",
-            "What does \"freezing point\" in the body mean?"
+            { text: "What are the differences between \"hypnotherapy\" and \"REIKI\"?", "action": "" },
+            { text: "What does \"freezing point\" in the body mean?", "action": "" },
           ]
         }
       },
       {
         "concept": "2. Hypnotherapy jargons",
-        "arrow": "downward"
       },
       {
         "concept": "3. Commonly used tools",
-        "arrow": "downward"
       }
     ]
   },

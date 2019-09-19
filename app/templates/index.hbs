@@ -1,3 +1,208 @@
-<h2>start free trial</h2>
+<div class="homepage__main">
+  {{#each this.model.homepage.video_carousel as |video|}}
+    <div>
+      <h2>{{video.headline}}</h2>
+      <a href={{video.main_button.lnik}}>
+        <i class={{video.main_button.icon}}></i>
+      </a>
+      <img src={{video.image_background}} alt={{video.description}}>
+    </div>
+  {{/each}}
+</div>
 
-{{this.model.}}
+<div class="homepage__service">
+  {{#let this.model.homepage.service as |service|}}
+    <h1>{{service.headline}}</h1>
+    <h2>{{service.tagline}}</h2>
+
+    {{#each service.problems as |problem|}}
+      <div>
+        <img src="" alt={{problem.graphic}}>
+        <div>
+          <h3>{{problem.problem_topic}}</h3>
+          <p>{{problem.body}}</p>
+          <p><strong>{{problem.result}}</strong></p>
+          <div>
+            <a href={{problem.main_button.link}}>{{problem.main_button.text}}</a>
+            <q>{{problem.client}}</q>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+
+    {{#let service.other_problem as |problem|}}
+      <h3>{{problem.problem_topic}}</h3>
+      <p>{{problem.body}}</p>
+      <div>
+        <a href={{problem.cta_button.link}}>{{problem.cta_button.text}}</a>
+      </div>
+      <div>
+        {{#each problem.main_buttons as |button|}}
+          <a href={{button.link}}>button.text</a>
+        {{/each}}
+      </div>
+    {{/let}}
+
+    {{#let service.process as |process|}}
+      <h2>{{process.headline}}</h2>
+      {{#each process.steps as |step|}}
+        <h3>{{step.step_topic}}</h3>
+        <p>{{step.body}}</p>
+        <q>{{step.patient}}</q>
+      {{/each}}
+      <div>
+        {{#each process.main_buttons as |button|}}
+          <a href={{button.link}}>{{button.text}}</a>
+        {{/each}}
+      </div>
+    {{/let}}
+  {{/let}}
+</div>
+
+<div class="homepage__about">
+  {{#let this.model.homepage.aboutPriti as |about|}}
+    {{about.headline}}
+    {{about.tagline}}
+
+    {{#let about.intro as |intro|}}
+      <div>
+        <div>
+          <h3>{{intro.headline}}</h3>
+          <span>{{intro.main_button.icon}}</span>
+        </div>
+        <video src={{intro.main_button.link}}>
+          <caption>{{intro.video.description}}</caption>
+        </video>
+      </div>
+      <a href={{intro.cta_button.link}}>{{intro.cta_button.text}}</a>
+    {{/let}}
+
+    {{#let about.pro_recognition as |recognition|}}
+      <p>{{recognition.tagline}}</p>
+      {{#each recognition.image_carousel as |carousel|}}
+        <div>
+          <img src={{carousel.certificate.image_background}} alt={{carousel.certificate.description}}>
+        </div>
+      {{/each}}
+    {{/let}}
+
+    {{#let about.client_recognition as |recognition|}}
+      <h3>{{recognition.tagline}}</h3>
+      {{#each recognition.testimonials as |testimonial|}}
+        <h4>{{testimonial.client}}</h4>
+        <a href={{testimonial.linkToService.link}}>{{testimonial.linkToService.text}}</a>
+        {{#each testimonial.body as |body|}}
+          <p>{{body}}</p>
+        {{/each}}
+      {{/each}}
+    {{/let}}
+
+    <a href={{about.cta_button.link}}>{{about.cta_button.text}}</a>
+  {{/let}}
+</div>
+
+<div class="pricing">
+  {{#let this.model.pricing as |pricing|}}
+
+    <h1>{{pricing.headline}}</h1>
+    <h2>{{pricing.pricingPlans.tagline}}</h2>
+    {{#each pricing.pricingPlans.plans as |plan|}}
+      <div class="pricing__plan">
+        <header>
+          <h3>{{plan.name}}</h3>
+          <p>{{plan.price}}</p>
+          <p>{{plan.duration}}</p>
+        </header>
+        <section>
+          <h4>{{plan.benefits.headline}}</h4>
+          {{#each plan.benefits.benefit_body as |body|}}
+            <span>{{body}}</span>
+          {{/each}}
+
+          <h5>{{plan.other_pricing_options.title}}</h5>
+          <div>
+            {{#each plan.other_pricing_options.options as |option|}}
+              <a href={{option.link}}>{{option.text}}</a>
+            {{/each}}
+          </div>
+          <div>
+            {{#each plan.buttons as |button|}}
+              <a href={{button.link}} class={{button.type}}>
+                {{button.text}}
+              </a>
+            {{/each}}
+          </div>
+        </section>
+      </div>
+    {{/each}}
+
+    {{#let pricing.pricingPlans.others as |other|}}
+      <h3>{{other.title}}</h3>
+      <a href={{other.button.link}} class={{other.button.type}}>
+        {{other.button.text}}
+      </a>
+    {{/let}}
+
+    {{#let pricing.discounts as |discount|}}
+      <h3>{{discount.taglnie}}</h3>
+      {{#each discount.coupons as |coupon|}}
+        <div class="pricing__discount__coupon">
+          <img src="{{coupon.image.image_background}}" alt="{{coupon.image.description}}">
+          <h4>{{coupon.body.subtitle}}</h4>
+          <h5>{{coupon.body.title}}</h5>
+          <p>{{coupon.body.description}}</p>
+          <div>
+            <button class="{{coupon.cta_button.type}}">{{coupon.cta_button.text}}</button>
+            <button class="{{coupon.share_button.type}}">{{coupon.share_button.text}}</button>
+          </div>
+        </div>
+      {{/each}}
+      <div>
+        <button class="{{discount.button.type}}">{{discount.button.text}}</button>
+      </div>
+    {{/let}}
+  {{/let}}
+</div>
+
+<div class="faq">
+  {{#let this.model.FAQs as |faq|}}
+    <h1>{{faq.headline}}</h1>
+    <h2>{{faq.subheadline}}</h2>
+    <h3>{{faq.remarks}}</h3>
+    <input type="text" placeholder={{faq.search_engine.text}}>
+
+    {{#each faq.topics as |topic|}}
+      topic.concept
+      {{#if topic.q_and_a}}
+        {{#each topic.q_and_a as |q_and_a|}}
+          {{#if q_and_a.Asker}}
+            <div class="faq__ask">
+              <span>{{q_and_a.Asker}}</span>
+              <div>{{q_and_a.Question}}</div>
+            </div>
+          {{else}}
+            <div class="faq__ans">
+              <span>{{q_and_a.Answerer}}</span>
+              <div>{{q_and_a.Answer}}</div>
+              <div>{{q_and_a.Likes_button.Icon}} {{q_and_a.Likes_button.Number}}</div>
+            </div>
+          {{/if}}
+        {{/each}}
+      {{/if}}
+
+      {{#if topic.client_feedback}}
+        <h2>{{topic.client_feedback.question}}</h2>
+        {{#each topic.client_feedback.buttons as |button|}}
+          <buttton class={{button.type}}>{{button.text}}</buttton>
+        {{/each}}
+      {{/if}}
+
+      {{#if topic.otheres}}
+        <h3>{{topic.others.headline}}</h3>
+        {{#each topic.others.options_button as |button|}}
+          <buttton>{{button.text}}</buttton>
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  {{/let}}
+</div>
