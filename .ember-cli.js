@@ -11,5 +11,7 @@ module.exports = {
 
     Setting `disableAnalytics` to true will prevent any data from being sent.
   */
-  "disableAnalytics": false
+  "disableAnalytics": false,
+  "port": 8345,
+  "host": "localhost"
 }

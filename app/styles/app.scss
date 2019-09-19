@@ -1,0 +1,157 @@
+$mainColor: #00B5B8;
+$secondaryColor: #ccf0f0;
+$bodyColor: #737373;
+
+// typography
+%serif { font-family: Georgia, 'Times New Roman', Times, serif; }
+%sans { font-family: Helvetica Neue, sans-serif; }
+%text-align-center, .text-align-center { text-align: center; }
+%text-align-left, .text-align-left { text-align: left; }
+%text-align-right, .text-align-right { text-align: right; }
+%text-bold { font-weight: bold; }
+
+// LAYOUTr
+%display-flex { display: flex; }
+
+/* ========================================================================== */
+/*                                 MAIN STYLES                                */
+/* ========================================================================== */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  @extend %serif;
+  @extend %text-align-center;
+  @extend %text-bold;
+  color: $mainColor;
+  font-size: 1.5rem;
+}
+
+h2 {
+  @extend %serif;
+  @extend %text-align-center;
+  @extend %text-bold;
+  color: $bodyColor;
+  font-size: 1.3rem;
+}
+
+h3 {
+  @extend %serif;
+  @extend %text-align-center;
+  color: $mainColor;
+  font-size:  1.3rem;
+}
+
+p, span {
+  @extend %sans;
+  color: $bodyColor;
+  font-size: 1.3rem;
+}
+
+a {
+  @extend %text-bold;
+  color: $mainColor;
+}
+
+%button-style {
+  padding: 10px 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, .3);
+  border-radius: 3px;
+
+  &, &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+.main-button {
+  @extend %button-style;
+  background: $secondaryColor;
+  color: $mainColor;
+}
+
+.secondary-button {
+  @extend %button-style;
+  background: $mainColor;
+  color: white;
+}
+
+.button-wrapper {
+  @extend %display-flex;
+  max-width: 50%;
+  min-width: 400px;
+  margin: 10px auto;
+  justify-content: center;
+
+  .button + .button {
+    margin-left: 10px;
+  }
+}
+
+/* ========================================================================== */
+/*                                 PAGE STYLES                                */
+/* ========================================================================== */
+
+
+.homepage__main {
+  @extend %display-flex;
+  overflow-y: auto;
+  flex-wrap: nowrap;
+
+  div {
+    background-color: #777;
+    min-width: 400px;
+  }
+  h2 {
+    color: white;
+  }
+}
+
+.home__service__problem {
+  @extend %display-flex;
+  margin-bottom: 20px;
+
+  img {
+    background: #777;
+    width: 220px;
+    border-radius: 5px;
+  }
+
+  .home__service__problem__topic {
+    margin-left: 20px;
+    width: calc(100% - 220px);
+    box-sizing: border-box;
+  }
+
+  .home__service__problem__client {
+    @extend %display-flex;
+    justify-content: space-between;
+  }
+}
+
+.homepage__service__process {
+  counter-reset: step
+}
+
+.homepage__service__process_step {
+  @extend %display-flex;
+  padding-left: 10rem;
+  position: relative;
+
+  &::before {
+    @extend %text-bold;
+    color: $secondaryColor;
+    counter-increment: step;
+    content: "0" counter(step); // NOTE: at most 10
+    font-size: 6rem;
+    position: absolute;
+    left: 2rem;
+    top: 0;
+  }
+}

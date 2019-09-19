@@ -1,7 +1,7 @@
 <div class="homepage__main">
   {{#each this.model.homepage.video_carousel as |video|}}
     <div>
-      <h2>{{video.headline}}</h2>
+      <h2>{{{video.headline}}}</h2>
       <a href={{video.main_button.lnik}}>
         <i class={{video.main_button.icon}}></i>
       </a>
@@ -16,13 +16,13 @@
     <h2>{{service.tagline}}</h2>
 
     {{#each service.problems as |problem|}}
-      <div>
+      <div class="home__service__problem">
         <img src="" alt={{problem.graphic}}>
-        <div>
+        <div class="home__service__problem__topic">
           <h3>{{problem.problem_topic}}</h3>
           <p>{{problem.body}}</p>
           <p><strong>{{problem.result}}</strong></p>
-          <div>
+          <div class="home__service__problem__client">
             <a href={{problem.main_button.link}}>{{problem.main_button.text}}</a>
             <q>{{problem.client}}</q>
           </div>
@@ -31,29 +31,37 @@
     {{/each}}
 
     {{#let service.other_problem as |problem|}}
-      <h3>{{problem.problem_topic}}</h3>
-      <p>{{problem.body}}</p>
-      <div>
-        <a href={{problem.cta_button.link}}>{{problem.cta_button.text}}</a>
-      </div>
-      <div>
-        {{#each problem.main_buttons as |button|}}
-          <a href={{button.link}}>button.text</a>
-        {{/each}}
+      <div class="home__service__other__problem">
+        <h3>{{problem.problem_topic}}</h3>
+        <p class="text-align-center">{{{problem.body}}}</p>
+        <div class="button-wrapper">
+          <a class="button main-button" href={{problem.cta_button.link}}>{{problem.cta_button.text}}</a>
+        </div>
+        <div class="button-wrapper">
+          {{#each problem.main_buttons as |button|}}
+            <a class="button secondary-button" href={{button.link}}>button.text</a>
+          {{/each}}
+        </div>
       </div>
     {{/let}}
 
     {{#let service.process as |process|}}
-      <h2>{{process.headline}}</h2>
-      {{#each process.steps as |step|}}
-        <h3>{{step.step_topic}}</h3>
-        <p>{{step.body}}</p>
-        <q>{{step.patient}}</q>
-      {{/each}}
-      <div>
-        {{#each process.main_buttons as |button|}}
-          <a href={{button.link}}>{{button.text}}</a>
+      <div class="homepage__service__process">
+        <h2>{{process.headline}}</h2>
+        {{#each process.steps as |step|}}
+          <div class="homepage__service__process_step">
+            <div class="homepage__service__process_step__content">
+              <h3 class="text-align-left">{{step.step_topic}}</h3>
+              <p>{{step.body}}</p>
+              <p class="text-align-right"><i>{{step.patient}}</i></p>
+            </div>
+          </div>
         {{/each}}
+        <div class="button-wrapper">
+          {{#each process.main_buttons as |button|}}
+            <a class="button secondary-button" href={{button.link}}>{{button.text}}</a>
+          {{/each}}
+        </div>
       </div>
     {{/let}}
   {{/let}}
@@ -61,8 +69,8 @@
 
 <div class="homepage__about">
   {{#let this.model.homepage.aboutPriti as |about|}}
-    {{about.headline}}
-    {{about.tagline}}
+    <h1>{{about.headline}}</h1>
+    <h2>{{about.tagline}}</h2>
 
     {{#let about.intro as |intro|}}
       <div>
