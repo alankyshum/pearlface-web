@@ -147,18 +147,18 @@
       <h3>{{discount.taglnie}}</h3>
       {{#each discount.coupons as |coupon|}}
         <div class="pricing__discount__coupon">
-          <img src="{{coupon.image.image_background}}" alt="{{coupon.image.description}}">
+          <img src={{coupon.image.image_background}} alt={{coupon.image.description}}>
           <h4>{{coupon.body.subtitle}}</h4>
           <h5>{{coupon.body.title}}</h5>
           <p>{{coupon.body.description}}</p>
           <div>
-            <button class="{{coupon.cta_button.type}}">{{coupon.cta_button.text}}</button>
-            <button class="{{coupon.share_button.type}}">{{coupon.share_button.text}}</button>
+            <button class={{coupon.cta_button.type}}>{{coupon.cta_button.text}}</button>
+            <button class={{coupon.share_button.type}}>{{coupon.share_button.text}}</button>
           </div>
         </div>
       {{/each}}
       <div>
-        <button class="{{discount.button.type}}">{{discount.button.text}}</button>
+        <button class={{discount.button.type}}>{{discount.button.text}}</button>
       </div>
     {{/let}}
   {{/let}}
